@@ -1,11 +1,10 @@
 name    'assimp-module'
 version '0.1.0'
-source 'UNKNOWN'
-author 'assimp'
-license 'Apache License, Version 2.0'
-summary 'UNKNOWN'
-description 'UNKNOWN'
-project_page 'UNKNOWN'
+source 'https://github.com/assimp/assimp'
+author 'Alejandro Sanchez Acosta'
+license 'GPLv3'
+summary 'Assimp Module'
+description 'Puppet module to compile and deploy assimp'
+project_page 'https://github.com/asancheza/puppet-assimp'
 
-## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
+dependency 'vcsrepository'
