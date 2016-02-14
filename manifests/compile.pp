@@ -6,14 +6,14 @@ class compile {
   exec { 'prepare':
     command => "cmake -G 'Unix Makefiles'",
     path    => '/usr/bin/',
-    cwd     => '/opt/code/assimp'
+    cwd     => '/opt/assimp/'
   }
 
   # Compile assimp
   exec { 'make':
     command => 'make && make install',
     path    => '/usr/bin/',
-    cwd     => '/opt/code/assimp',
+    cwd     => '/opt/assimp/',
     timeout => 1800,
     require => Exec["prepare"]
   }
@@ -22,7 +22,7 @@ class compile {
   exec { 'bindings':
     command => 'python setup.py install',
     path    => '/usr/bin/',
-    cwd     => '/opt/code/assimp/port/PyAssimp/',
+    cwd     => '/opt/assimp/port/PyAssimp/',
     timeout => 1800,
     require => Exec["make"]
   }
@@ -30,7 +30,7 @@ class compile {
   # Export LD_LIBRARY_PATH (default in Ubuntu is empty)
   file { "/etc/ld.so.conf.d/assimp.conf":
      ensure  => present,
-     content => "/usr/local/lib",
+     content => "/usr/local/lib/",
      mode    => 755,
      require => Exec["make"]
   }

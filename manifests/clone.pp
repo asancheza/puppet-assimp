@@ -18,7 +18,7 @@ class clone ($username='asancheza') {
         managehome  => true,
     }
 
-    file { '/opt/code' :
+    file { '/opt/' :
         ensure  => directory,
         group   => $group,
         owner   => $username,
@@ -36,7 +36,7 @@ class clone ($username='asancheza') {
         ensure => installed,
     }
     
-    vcsrepo { "/opt/code/assimp":
+    vcsrepo { "/opt/assimp":
         ensure   => latest,
         owner    => $owner,
         group    => $owner,
