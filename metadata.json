@@ -8,7 +8,7 @@
   "project_page": "https://github.com/puppetlabs/puppetlabs-assimp",
   "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
   "dependencies": [
-    {"name":"puppetlabs/vcrrepo","version_requirement":">= 1.3.2"},
+    {"name":"puppetlabs/vcrrepo","version_requirement":">= 1.3.2"}
   ],
   "data_provider": null,
   "operatingsystem_support": [
