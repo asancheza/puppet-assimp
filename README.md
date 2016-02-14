@@ -24,6 +24,34 @@ python
 import pyassimp
 ```
 
+## Adding agent
+
+```
+apt-get install puppet
+#apt-get update
+```
+```
+/etc/hosts
+172.17.0.3 puppet puppet.example.com
+```
+```
+/etc/puppet/puppet.conf
+[agent]
+server = puppet.example.com
+```
+```
+puppet agent -t # agent
+```
+
+In master:
+```
+puppet cert list
+puppet cert sign <id>
+```
+```
+puppet agent -t # agent
+```
+
 ## License
 
 This program is free software: you can redistribute it and/or modify
