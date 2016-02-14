@@ -15,6 +15,7 @@ class packagedeps {
 	# Python dependency (python-dev required)
 	exec { 'numpy':  
     		command => '/usr/bin/pip install numpy',
+		timeout => 3000,
 		require => Package['python-dev']
 	}
 }
