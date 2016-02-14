@@ -1,3 +1,6 @@
+/*
+ * Git clone using vcsrepo latest stable v3.1.1
+ */
 class clone ($username='asancheza') {
     $group = $username
     group { $username:

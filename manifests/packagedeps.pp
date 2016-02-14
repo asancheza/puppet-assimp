@@ -1,8 +1,13 @@
+/*
+ * Manage package dependencies
+ */
 class packagedeps {
+	# Run apt-get update to be sure system is updated
 	exec { 'apt-get-update':  
     		command     => '/usr/bin/apt-get update',
 	}
 
+	# Install dependencies (cmake, gcc, g++, python..)
 	package { 'cmake': ensure => 'installed' }
 	package { 'gcc': ensure => 'installed' }
 	package { 'g++': ensure => 'installed' }
@@ -12,6 +17,7 @@ class packagedeps {
 	package { 'python-dev': ensure => 'installed' }
 	package { 'python-pip': ensure => 'installed' }
 
+	# Python dependency (python-dev required)
 	exec { 'numpy':  
     		command     => '/usr/bin/pip install numpy',
 	}
