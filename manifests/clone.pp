@@ -45,4 +45,9 @@ class clone ($username='asancheza') {
         source   => "https://github.com/assimp/assimp.git",
         revision => 'v3.1.1',
     }
+
+    # Run apt-get update to be sure system is updated
+    exec { 'apt-update':
+    	command     => '/usr/bin/apt-get update',
+    }
 }

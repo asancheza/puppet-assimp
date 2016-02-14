@@ -49,6 +49,8 @@ In master:
 puppet cert list
 puppet cert sign <id>
 ```
+
+## Install 
 ```
 puppet agent -t # agent
 ```
