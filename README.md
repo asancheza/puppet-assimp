@@ -40,6 +40,7 @@ apt-get install puppet
 server = puppet.example.com
 ```
 ```
+puppet agent --enable
 puppet agent -t # agent
 ```
 
