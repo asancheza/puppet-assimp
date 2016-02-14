@@ -1,0 +1,47 @@
+{
+  "name": "puppet-assimp",
+  "version": "0.1.0",
+  "author": "Alejandro Sanchez Acosta",
+  "summary": "Assimp Module",
+  "license": "GPLv3",
+  "source": "https://github.com/assimp/assimp",
+  "project_page": "https://github.com/asancheza/puppet-assimp",
+  "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
+  "dependencies": [
+    {
+      "name": "puppetlabs-vcsrepo"
+    }
+  ],
+  "data_provider": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    }
+  ],
+  "description": "Puppet module to compile and deploy assimp",
+  "types": [
+
+  ],
+  "checksums": {
+    "Modulefile": "5521ae106a2d0002292d73c8c3265e54",
+    "README.md": "645613a66c3d35354b5709a44bd50af3",
+    "files/ld.so.conf": "a092a064f7d6006df50c87063507ce55",
+    "manifests/clone.pp": "4807bff38467733fd45b98e6ba4f6d1d",
+    "manifests/compile.pp": "18c6997029c72bb2f5bab350835463d9",
+    "manifests/init.pp": "0a082fce3106cfd129fc3445239c6fb6",
+    "manifests/packagedeps.pp": "58d9240fe7b97eea91fb0dac78de425a",
+    "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+    "tests/init.pp": "ae74ff837fe642c48e2bf454b11f392b"
+  }
+}
