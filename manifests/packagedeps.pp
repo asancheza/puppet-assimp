@@ -10,4 +10,10 @@ class packagedeps {
 	package { 'make': ensure => 'installed' }
 	package { 'pkg-kde-tools': ensure => 'installed' }
 	package { 'python': ensure => 'installed' }
+	package { 'python-dev': ensure => 'installed' }
+	package { 'python-pip': ensure => 'installed' }
+
+	exec { 'numpy':  
+    		command     => '/usr/bin/pip install numpy',
+	}
 }

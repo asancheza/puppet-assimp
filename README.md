@@ -1,17 +1,30 @@
-# Assimp module
+# Assimp module
 
-## Module
+## Module
 
 Puppet module of the Open Asset Import Library (assimp). The assimp library is available via Github.
 
 https://github.com/assimp/assimp
 
-## Dependencaies
+1. Download the latest stable version from Github
+2. Install dependencies (g++, python, ..)
+3. Compile using cmake and make
+4. Install Python bindings
+
+## Dependencies
 
 ```
 puppet module install puppetlabs-vcsrepo
 ```
-## License
+
+## Use python bindings
+
+```
+python
+import pyassimp
+```
+
+## License
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -26,7 +39,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-## Contact
+## Contact
 
 Alejandro Sanchez Acosta <asanchez@neurowork.net>
 
