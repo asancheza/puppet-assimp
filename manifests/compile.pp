@@ -1,23 +1,23 @@
 class compile {
   exec { 'prepare':
     command => "cmake -G 'Unix Makefiles'",
-    path    => '/usr/bin/:/bin/:/usr/local/bin',
+    path    => '/usr/bin/',
     cwd     => '/opt/code/assimp'
   }
 
   exec { 'make':
     command => 'make && make install',
-    path    => '/usr/local/bin/:/bin/',
+    path    => '/usr/bin/',
     cwd     => '/opt/code/assimp'
   }
 
   exec { 'bindings':
     command => 'python setup.py install',
-    path    => '/usr/local/bin/:/bin/',
+    path    => '/usr/bin/',
     cwd     => '/opt/code/assimp/port/PyAssimp/' 
   }
 
-  file { '/etc/ld.so.conf':
+  /*file { '/etc/ld.so.conf':
     owner   => root,
     group   => root,
     mode    => 644,
@@ -28,5 +28,5 @@ class compile {
     command => "/sbin/ldconfig",
     subscribe => File["/etc/ld.so.conf"],
     refreshonly => true
-	}
+  }*/
 }

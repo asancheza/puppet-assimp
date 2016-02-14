@@ -1,5 +1,5 @@
 class puppet-assimp {
 	class { 'clone': }
-	class { 'dependencies': }
+	class { 'packagedeps': }
 	class { 'compile': }
 }
