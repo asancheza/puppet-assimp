@@ -1,5 +1,5 @@
 {
-  "name": "puppet-assimp",
+  "name": "asancheza-assimp",
   "version": "0.1.0",
   "author": "Alejandro Sanchez Acosta",
   "summary": "Assimp Module",
@@ -16,7 +16,7 @@
 
   ],
   "checksums": {
-    "Modulefile": "5521ae106a2d0002292d73c8c3265e54",
+    "Modulefile": "58be644524bed7d9d4b68d345b26b3e9",
     "README.md": "645613a66c3d35354b5709a44bd50af3",
     "files/ld.so.conf": "a092a064f7d6006df50c87063507ce55",
     "manifests/clone.pp": "4807bff38467733fd45b98e6ba4f6d1d",

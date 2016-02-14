@@ -1,4 +1,4 @@
-name    'puppet-assimp'
+name    'asancheza-assimp'
 version '0.1.0'
 source 'https://github.com/assimp/assimp'
 author 'Alejandro Sanchez Acosta'
