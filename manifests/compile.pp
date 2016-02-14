@@ -14,7 +14,7 @@ class compile {
     command => 'make && make install',
     path    => '/usr/bin/',
     cwd     => '/opt/assimp/',
-    timeout => 1800,
+    timeout => 0,
     require => Exec["prepare"]
   }
 
@@ -23,7 +23,7 @@ class compile {
     command => 'python setup.py install',
     path    => '/usr/bin/',
     cwd     => '/opt/assimp/port/PyAssimp/',
-    timeout => 1800,
+    timeout => 0,
     require => Exec["make"]
   }
 
