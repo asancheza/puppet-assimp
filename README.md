@@ -6,6 +6,11 @@ Puppet module of the Open Asset Import Library (assimp). The assimp library is a
 
 https://github.com/assimp/assimp
 
+## Dependencaies
+
+```
+puppet module install puppetlabs-vcsrepo
+```
 ## License
 
 This program is free software: you can redistribute it and/or modify
