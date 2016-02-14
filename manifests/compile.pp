@@ -41,7 +41,7 @@ class compile {
   }
 
   exec { 'ln': 
-    command => "ln -s /usr/local/lib/libassym.so /lib/libassym.so",
+    command => "ln -s /usr/local/lib/libassimp.so /lib/libassimp.so",
     path    => '/bin/',
     require => Exec["ldlibcfg"]
  }  
