@@ -23,21 +23,14 @@ class compile {
     cwd     => '/opt/code/assimp/port/PyAssimp/' 
   }
 
-  /*file { '/etc/ld.so.conf':
-    owner   => root,
-    group   => root,
-    mode    => 644,
-    source  => "puppet:///files/ld.so.conf",
+  # Export LD_LIBRARY_PATH
+  file { "/etc/ld.so.conf.d/assimp.conf":
+     ensure  => present,
+     content => "/usr/local/lib",
+     mode    => 755
   }
 
   exec { 'ldlibcfg': 
     command => "/sbin/ldconfig",
-    subscribe => File["/etc/ld.so.conf"],
-    refreshonly => true
-  }*/
-
-  # Export LD_LIBRARY_PATH
-  exec { 'export':
-    command => '/bin/bash -c "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib"',
   }
 }
