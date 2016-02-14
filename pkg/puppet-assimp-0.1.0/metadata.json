@@ -23,12 +23,6 @@
       ]
     }
   ],
-  "requirements": [
-    {
-      "name": "puppet",
-      "version_requirement": ">= 3.0.0 < 5.0.0"
-    }
-  ],
   "description": "Puppet module to compile and deploy assimp",
   "types": [
 
