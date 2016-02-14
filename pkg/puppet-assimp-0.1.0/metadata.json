@@ -6,21 +6,9 @@
   "license": "GPLv3",
   "source": "https://github.com/assimp/assimp",
   "project_page": "https://github.com/asancheza/puppet-assimp",
-  "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
   "dependencies": [
     {
       "name": "puppetlabs-vcsrepo"
-    }
-  ],
-  "data_provider": null,
-  "operatingsystem_support": [
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [
-        "10.04",
-        "12.04",
-        "14.04"
-      ]
     }
   ],
   "description": "Puppet module to compile and deploy assimp",
