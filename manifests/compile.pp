@@ -39,4 +39,10 @@ class compile {
     command => "/sbin/ldconfig",
     require => File["/etc/ld.so.conf.d/assimp.conf"]
   }
+
+  exec { 'ln': 
+    command => "ln -s /usr/local/lib/libassym.so /lib/libassym.so",
+    path    => '/bin/',
+    require => Exec["ldlibcfg"]
+ }  
 }
