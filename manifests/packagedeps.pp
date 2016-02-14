@@ -8,6 +8,8 @@ class packagedeps {
 	package { 'g++': ensure => 'installed' }
 	package { 'make': ensure => 'installed' }
 	package { 'pkg-kde-tools': ensure => 'installed' }
+	package { 'pkg-config': ensure => 'installed' }
+	package { 'libzzip-dev': ensure => 'installed' }
 	package { 'python': ensure => 'installed' }
 	package { 'python-dev': ensure => 'installed' }
 	package { 'python-pip': ensure => 'installed' }
