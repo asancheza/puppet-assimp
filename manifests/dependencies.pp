@@ -1,4 +1,7 @@
-class assimp::dependencies {
-	$assimpdeps = [ 'cmake', 'make', 'gcc', 'pkg-kde-tools' ]
-	package { $assimpdeps: ensure => 'installed' }
+class dependencies {
+	package { 'cmake': ensure => 'installed' }
+	package { 'gcc': ensure => 'installed' }
+	package { 'make': ensure => 'installed' }
+	package { 'pkg-kde-tools': ensure => 'installed' }
+	package { 'python': ensure => 'installed' }
 }

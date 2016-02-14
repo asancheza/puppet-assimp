@@ -1,7 +1,7 @@
-class assimp::exec {
+class compile {
   exec { 'prepare':
-    command => 'cmake -G 'Unix Makefiles',
-    path    => '/usr/local/bin/:/bin/',
+    command => "cmake -G 'Unix Makefiles'",
+    path    => '/usr/bin/:/bin/:/usr/local/bin',
     cwd     => '/opt/code/assimp'
   }
 
