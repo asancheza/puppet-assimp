@@ -14,6 +14,7 @@ class compile {
     command => 'make && make install',
     path    => '/usr/bin/',
     cwd     => '/opt/code/assimp',
+    timeout => 1800,
     require => Exec["prepare"]
   }
 
@@ -22,6 +23,7 @@ class compile {
     command => 'python setup.py install',
     path    => '/usr/bin/',
     cwd     => '/opt/code/assimp/port/PyAssimp/',
+    timeout => 1800,
     require => Exec["make"]
   }
 
@@ -29,7 +31,7 @@ class compile {
   file { "/etc/ld.so.conf.d/assimp.conf":
      ensure  => present,
      content => "/usr/local/lib",
-     mode    => 755
+     mode    => 755,
      require => Exec["make"]
   }
 
